@@ -1,0 +1,27 @@
+# Unity3D .gitignore file.
+# Store this file at the root of your local repository.
+.DS_Store
+/obj
+/Assets/StreamingAssets
+/Assets/StreamingAssets.meta
+Temp
+*.csproj
+*.pidb
+*.unityproj
+*.sln
+*.userprefs
+*build*
+*LibrariesNoGIT*
+*_Demo*
+#*Examples*
+
+Library/*
+!Library/*.asset
+
+.vscode
+
+*_json.txt*
+Assets/Plugins/InAppBillingAndroid.meta
+Assets/Plugins/InAppBillingAndroid/demo.meta
+Assets/Plugins/StoreKit.meta
+Assets/Plugins/StoreKit/demo.meta
