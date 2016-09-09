@@ -10,12 +10,12 @@
 		</ImageButton>
 	</GameObject>
 
-	<Particles emitMode="Edge" systemName="BubbleParticles" bounds="@eval(0,h/-6,w/2,h/6)" pivot="0.5,0.5" anchor="middle,center">
-		<ImageButton resourcePath="Main/button" anchor="stretch,stretch">
-			<Particles emitMode="Fill" systemName="TopBubbleParticles" anchor="stretch,stretch" />
+	<GameObject bounds="@eval(0,h/-6,w/2,h/6)" pivot="0.5,0.5" anchor="middle,center">
+		<ImageButton mask="true" showMaskGraphic="true" resourcePath="Main/button" anchor="stretch,stretch">
+			<Particles emitMode="Fill" systemName="BubbleParticles" anchor="stretch,stretch" />
 			<Text value="Bubbles" sizeToFit="true" maxFontSize="999" size="@eval(w*0.8,h*0.6)" pivot="0.5,0.5" anchor="stretch,stretch" />
 		</ImageButton>
-	</Particles>
+	</GameObject>
 
 
 </Canvas>
