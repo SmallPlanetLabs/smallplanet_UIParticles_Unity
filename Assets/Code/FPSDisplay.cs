@@ -1,10 +1,11 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
  
 public class FPSDisplay : MonoBehaviour
 {
-	private ParticleSystem testParticleSystem = null;
+	private List<ParticleSystem> testParticleSystems = new List<ParticleSystem> ();
 	float deltaTime = 0.0f;
 
 	void Start() {
@@ -12,9 +13,7 @@ public class FPSDisplay : MonoBehaviour
 		foreach (GameObject obj in SceneManager.GetActiveScene().GetRootGameObjects()) {
 			if (obj.activeSelf == true) {
 				ParticleSystem[] systems = obj.GetComponentsInChildren<ParticleSystem> ();
-				if (systems.Length > 0) {
-					testParticleSystem = systems [0];
-				}
+				testParticleSystems.AddRange (systems);
 			}
 		}
 	}
@@ -29,6 +28,12 @@ public class FPSDisplay : MonoBehaviour
 		int w = Screen.width, h = Screen.height;
  
 		GUIStyle style = new GUIStyle();
+
+
+		int nParticles = 0;
+		foreach (ParticleSystem system in testParticleSystems) {
+			nParticles += system.maxParticles;
+		}
  
 		Rect rect = new Rect(0, 0, w, h * 2 / 100);
 		style.alignment = TextAnchor.UpperLeft;
@@ -36,7 +41,7 @@ public class FPSDisplay : MonoBehaviour
 		style.normal.textColor = Color.red;
 		float msec = deltaTime * 1000.0f;
 		float fps = 1.0f / deltaTime;
-		string text = string.Format("{0:0.0} ms ({1:0.} fps) ({2} particles)", msec, fps, testParticleSystem.maxParticles);
+		string text = string.Format("{0:0.0} ms ({1:0.} fps) ({2} max particles)", msec, fps, nParticles);
 		GUI.Label(rect, text, style);
 	}
 }
