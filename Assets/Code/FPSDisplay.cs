@@ -32,7 +32,7 @@ public class FPSDisplay : MonoBehaviour
 
 		int nParticles = 0;
 		foreach (ParticleSystem system in testParticleSystems) {
-			nParticles += system.maxParticles;
+			nParticles += system.particleCount;
 		}
  
 		Rect rect = new Rect(0, 0, w, h * 2 / 100);
