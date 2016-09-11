@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Canvas renderMode="ScreenSpaceOverlay" xmlns="http://schema.smallplanet.com/PlanetUnity2.xsd" >
+
+	<Particles emitMode="Fill" systemName="SmokeParticlesBack" anchor="stretch,stretch" ignoreMouse="true" />
+
+	<ImageButton resourcePath="MaxParticleTest/button" bounds="@eval(0,0,w/2,h/6)" pivot="0.5,0.5" anchor="middle,center">
+		<Text value="Smoke" sizeToFit="true" maxFontSize="999" size="@eval(w*0.8,h*0.6)" pivot="0.5,0.5" anchor="stretch,stretch" />
+	</ImageButton>
+
+	<Particles emitMode="Fill" systemName="SmokeParticlesFore" anchor="stretch,stretch" ignoreMouse="true" />
+
+</Canvas>
