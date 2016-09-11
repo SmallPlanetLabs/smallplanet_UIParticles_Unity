@@ -3,9 +3,17 @@
 
 	<Particles emitMode="Fill" systemName="SmokeParticlesBack" anchor="stretch,stretch" ignoreMouse="true" />
 
-	<ImageButton resourcePath="MaxParticleTest/button" bounds="@eval(0,0,w/2,h/6)" pivot="0.5,0.5" anchor="middle,center">
-		<Text value="Smoke" sizeToFit="true" maxFontSize="999" size="@eval(w*0.8,h*0.6)" pivot="0.5,0.5" anchor="stretch,stretch" />
-	</ImageButton>
+	<Text value="Light-winged Smoke, Icarian bird,\nMelting thy pinions in thy upward flight,\n
+Lark without song, and messenger of dawn\n
+Circling above the hamlets as they nest;\n
+Or else, departing dream, and shadowy form\n
+Of midnight vision, gathering up thy skirts;\n
+By night star-veiling, and by day\n
+Darkening the light and blotting out the sun;\n
+Go thou my incense upward from this hearth,\n
+And ask the gods to pardon this clear flame.\n
+\n\n
+- Henry David Thoreau" fontColor="#CCCCCC99" sizeToFit="true" maxFontSize="999" size="@eval(w*0.8,h*0.6)" pivot="0.5,0.5" anchor="stretch,stretch" />
 
 	<Particles emitMode="Fill" systemName="SmokeParticlesFore" anchor="stretch,stretch" ignoreMouse="true" />
 

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Canvas renderMode="ScreenSpaceOverlay" xmlns="http://schema.smallplanet.com/PlanetUnity2.xsd" >
+
+	<Color color="#222222FF" size="@eval(w*0.8,h*0.8)" pivot="0.5,0.5" anchor="middle,center" />
+
+	<GameObject bounds="@eval(0,h/6,w/2,h/6)" pivot="0.5,0.5" anchor="middle,center">
+		<ImageButton resourcePath="ButtonTest/button" anchor="stretch,stretch">
+			<Particles emitMode="Edge" systemName="SparkleParticles" anchor="stretch,stretch" />
+			<Text value="Sparkles" sizeToFit="true" maxFontSize="999" size="@eval(w*0.8,h*0.6)" pivot="0.5,0.5" anchor="stretch,stretch" />
+		</ImageButton>
+	</GameObject>
+
+	<GameObject bounds="@eval(0,h/-6,w/2,h/6)" pivot="0.5,0.5" anchor="middle,center">
+		<ImageButton mask="true" showMaskGraphic="true" resourcePath="ButtonTest/button" anchor="stretch,stretch">
+			<Particles emitMode="Fill" systemName="BubbleParticles" anchor="stretch,stretch" />
+			<Text value="Bubbles" sizeToFit="true" maxFontSize="999" size="@eval(w*0.8,h*0.6)" pivot="0.5,0.5" anchor="stretch,stretch" />
+		</ImageButton>
+	</GameObject>
+
+
+</Canvas>
